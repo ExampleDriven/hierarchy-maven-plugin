@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.exampledriven</groupId>
+  <groupId>com.github.exampledriven</groupId>
   <artifactId>hierarchy-maven-plugin</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
@@ -25,7 +25,7 @@
   <scm>
     <connection>scm:git:git://github.com/ExampleDriven/hierarchy-maven-plugin.git</connection>
     <developerConnection>scm:git:ssh://github.com/ExampleDriven/hierarchy-maven-plugin.git</developerConnection>
-    <url>https://github.com/ExampleDriven/hierarchy-maven-plugin</url>
+    <url>https://github.com/ExampleDriven/hierarchy-maven-plugin.git</url>
   </scm>
 
   <developers>
@@ -109,6 +109,11 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-plugin-plugin</artifactId>
         <version>3.2</version>
         <configuration>
@@ -145,6 +150,18 @@
       </plugin>
     </plugins>
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>oss.sonatype.org</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+      <id>oss.sonatype.org</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <profiles>
     <profile>
       <id>run-its</id>
