@@ -3,7 +3,7 @@
 
 # Hierarchy maven plugin
 
-This plugin displays the hierarchy of parent poms and imported poms. The result is somewhat similar to dependency:tree, but that displays the actual dependencies, while, this plugin displays the "reason" why those dependencies are resolved.
+This plugin displays the hierarchy of parent poms and imported poms. The result is somewhat similar to ``` dependency:tree ```, but that displays the actual dependencies, this plugin may shed light on which dependency was defined where.
 
 ## Usage
 
