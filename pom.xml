@@ -24,8 +24,8 @@
 
   <scm>
     <connection>scm:git:git://github.com/ExampleDriven/hierarchy-maven-plugin.git</connection>
-    <developerConnection>scm:git:ssh://github.com/ExampleDriven/hierarchy-maven-plugin.git</developerConnection>
-    <url>https://github.com/ExampleDriven/hierarchy-maven-plugin.git</url>
+    <developerConnection>scm:git:git@github.com:ExampleDriven/hierarchy-maven-plugin.git</developerConnection>
+    <url>https://github.com/ExampleDriven/hierarchy-maven-plugin</url>
   </scm>
 
   <developers>
