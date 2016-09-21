@@ -1,4 +1,4 @@
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.exampledriven/hierarchy-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/org.exampledriven/hierarchy-maven-plugin/rsql-parser)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.exampledriven/hierarchy-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/com.github.exampledriven/hierarchy-maven-plugin/rsql-parser)
 [![Build Status](https://travis-ci.org/ExampleDriven/hierarchy-maven-plugin.svg?branch=master)](https://travis-ci.org/ExampleDriven/hierarchy-maven-plugin)
 
 # Hierarchy maven plugin
@@ -12,9 +12,9 @@ This plugin displays the hierarchy of parent poms and imported poms. The result 
   <build>
     <plugins>
       <plugin>
-        <groupId>exampledriven</groupId>
+        <groupId>com.github.exampledriven</groupId>
         <artifactId>hierarchy-maven-plugin</artifactId>
-        <version>1.1</version>
+        <version>1.2</version>
       </plugin>
     </plugins>
   </build>
