@@ -3,11 +3,11 @@
 
 # Hierarchy maven plugin
 
-This plugin displays the hierarchy of parent poms and imported poms. The result is somewhat similar to ``` dependency:tree ```, but that displays the actual dependencies, this plugin may shed light on which dependency was defined where.
+This plugin displays the pom hierarchy including parents and imported poms in the dependencyManagement section. The result is somewhat similar to ``` dependency:tree ```, but that displays the actual dependencies, this plugin may shed light on which dependency was defined where.
 
 ## Usage
 
-1. Add the plugin to your project
+### Add the plugin to your project
 ```xml
   <build>
     <plugins>
@@ -19,14 +19,13 @@ This plugin displays the hierarchy of parent poms and imported poms. The result 
     </plugins>
   </build>
 ```
-  
-2. start the plugin like this
+### Execute the plugin
 
 ```shell
  mvn hierarchy:tree
 ```
 
-3. See output like this
+### See the output 
 
 ```shell
 [INFO] Displaying hierarchy. Set level=full to display dependencies in dependencyManagement
@@ -41,11 +40,29 @@ This plugin displays the hierarchy of parent poms and imported poms. The result 
 
 ```
 
-4. to display dependencies in dependencyManagementsection add the -Dlevel=full parameter 
+### to display dependencies in dependencyManagementsection add the -Dlevel=full parameter 
 
 ```shell
  mvn hierarchy:tree -Dlevel=full
 ```
+### And more detailed output is generated
+
+```shell
+[INFO] Displaying hierarchy.
+[INFO]  PARENT org.springframework.boot:spring-boot-starter-parent:1.4.0.RELEASE
+[INFO]    PARENT org.springframework.boot:spring-boot-dependencies:1.4.0.RELEASE
+[INFO]          DEP_MANAGEMENT org.springframework.boot:spring-boot:1.4.0.RELEASE
+[INFO]          DEP_MANAGEMENT org.springframework.boot:spring-boot:1.4.0.RELEASE
+[INFO]          DEP_MANAGEMENT org.springframework.boot:spring-boot-test:1.4.0.RELEASE
+[INFO]          DEP_MANAGEMENT org.springframework.boot:spring-boot-test-autoconfigure:1.4.0.RELEASE
+[INFO]          DEP_MANAGEMENT org.springframework.boot:spring-boot-test:1.4.0.RELEASE
+...
+..
+.
+
+
+```
+
 
 ## Support, contact
-Questions, comments can be placed as github issues, pull requests, welcome
+Questions, comments can be placed as github issues. Pull requests, welcome!
