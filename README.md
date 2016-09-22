@@ -14,7 +14,7 @@ This plugin displays the hierarchy of parent poms and imported poms. The result 
       <plugin>
         <groupId>com.github.exampledriven</groupId>
         <artifactId>hierarchy-maven-plugin</artifactId>
-        <version>1.3</version>
+        <version>1.4</version>
       </plugin>
     </plugins>
   </build>

@@ -10,6 +10,8 @@
 
   <url>https://github.com/ExampleDriven/hierarchy-maven-plugin</url>
 
+  <description>This plugin displays the hierarchy of parent poms and imported poms</description>
+
   <organization>
     <name>Exampledriven</name>
     <url>exampledriven.wordpress.com</url>
