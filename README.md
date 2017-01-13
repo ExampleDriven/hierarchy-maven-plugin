@@ -2,8 +2,9 @@
 [![Build Status](https://travis-ci.org/ExampleDriven/hierarchy-maven-plugin.svg?branch=master)](https://travis-ci.org/ExampleDriven/hierarchy-maven-plugin)
 
 # Hierarchy maven plugin
+Dependencies of a maven project can be easily listed, but it is quite challenging to know where were they defined. This is especially true for projects having complex parent structures with multiple level of parent poms and importing other poms.
 
-This plugin displays the pom hierarchy including parents and imported poms in the dependencyManagement section. The result is somewhat similar to ``` dependency:tree ```, but that displays the actual dependencies, this plugin may shed light on which dependency was defined where.
+This plugin displays the pom hierarchy including parents and imported poms in the dependencyManagement section. The result is somewhat similar to ``` dependency:tree ```, but while that displays the actual dependencies, this plugin shows the location where a dependency was defined.
 
 ## Usage
 
