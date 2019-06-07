@@ -37,7 +37,7 @@
       <plugin>
         <groupId>exampledriven</groupId>
         <artifactId>hierarchy-maven-plugin</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.5-SNAPSHOT</version>
       </plugin>
     </plugins>
   </build>
