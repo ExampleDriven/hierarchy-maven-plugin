@@ -3,7 +3,7 @@
 
   <groupId>com.github.exampledriven</groupId>
   <artifactId>hierarchy-maven-plugin</artifactId>
-  <version>1.6-SNAPSHOT</version>
+  <version>1.5-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>Hierarchy maven plugin</name>
