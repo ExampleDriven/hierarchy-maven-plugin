@@ -3,7 +3,7 @@
 
   <groupId>com.github.exampledriven</groupId>
   <artifactId>hierarchy-maven-plugin</artifactId>
-  <version>1.6</version>
+  <version>1.7-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>Hierarchy maven plugin</name>
@@ -27,7 +27,7 @@
     <connection>scm:git:git://github.com/ExampleDriven/hierarchy-maven-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:ExampleDriven/hierarchy-maven-plugin.git</developerConnection>
     <url>https://github.com/ExampleDriven/hierarchy-maven-plugin</url>
-    <tag>hierarchy-maven-plugin-1.6</tag>
+    <tag>hierarchy-maven-plugin-1.5</tag>
   </scm>
 
   <developers>
