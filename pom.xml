@@ -177,7 +177,7 @@
               </pomIncludes>
               <postBuildHookScript>verify</postBuildHookScript>
               <localRepositoryPath>${project.build.directory}/local-repo</localRepositoryPath>
-              <settingsFile>src/it/srunettings.xml</settingsFile>
+              <settingsFile>src/it/settings.xml</settingsFile>
               <goals>
                 <goal>clean</goal>
                 <goal>test-compile</goal>
@@ -215,6 +215,11 @@
             <version>2.2.1</version>
             <executions>
               <execution>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+              <execution>
                 <id>attach-sources</id>
                 <goals>
                   <goal>jar-no-fork</goal>
@@ -232,17 +237,6 @@
                 <phase>verify</phase>
                 <goals>
                   <goal>sign</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-source-plugin</artifactId>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>jar</goal>
                 </goals>
               </execution>
             </executions>

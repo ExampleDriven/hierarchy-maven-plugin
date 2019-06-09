@@ -22,6 +22,10 @@ public class HierarchyMojo extends AbstractMojo {
 
     private static final int DEPTH_INCREMENT = 2;
 
+    private static final String LEVEL_FULL = "full";
+    private static final String PROPERTY_PROJECT_VERSION = "project.version";
+    private static final String PROPERTY_PARENT_PREFIX = "project.parent.";
+
     private enum MessageType {PARENT, IMPORT, DEP_MANAGEMENT}
 
     @Parameter( defaultValue = "${project}", readonly = true )
@@ -44,7 +48,7 @@ public class HierarchyMojo extends AbstractMojo {
 
         String message = "Displaying hierarchy. ";
         if (!isLevelFull()) {
-            message += "Set level=full to display dependencies in dependencyManagement";
+            message += "Set level="+LEVEL_FULL+" to display dependencies in dependencyManagement";
         }
         getLog().info(message);
 
@@ -69,7 +73,7 @@ public class HierarchyMojo extends AbstractMojo {
     }
 
     private boolean isLevelFull() {
-        return "full".equals(level);
+        return LEVEL_FULL.equals(level);
     }
 
     private void displayManagedDependencies(MavenProject currentProject, int depth) {
@@ -133,6 +137,10 @@ public class HierarchyMojo extends AbstractMojo {
     }
 
     private String findPropertyRecursively(MavenProject mavenProject, String propertyName) {
+        if (PROPERTY_PROJECT_VERSION.equals(propertyName)) {
+            return mavenProject.getVersion();
+        }
+
         Properties properties = mavenProject.getProperties();
         if (properties != null) {
             String propertyValue = (String) properties.get(propertyName);
@@ -143,7 +151,11 @@ public class HierarchyMojo extends AbstractMojo {
 
         MavenProject parent = mavenProject.getParent();
         if (parent != null) {
-            return findPropertyRecursively(parent, propertyName);
+            String fixedPropertyName = propertyName;
+            if (propertyName.startsWith(PROPERTY_PARENT_PREFIX)) {
+                fixedPropertyName = fixedPropertyName.replaceAll("project\\.parent\\.(?<prop>.*)", "project.${prop}");
+            }
+            return findPropertyRecursively(parent, fixedPropertyName);
         }
 
         return propertyName;
